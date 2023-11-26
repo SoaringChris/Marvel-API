@@ -1,0 +1,43 @@
+import MarvelTextObject from "./marvelTextObject";
+import MarvelUrl from "./marvelUrl";
+import MarvelSeries from "./marvelSeries";
+import MarvelDate from "./marvelDate";
+import MarvelPrice from "./marvelPrice";
+import MarvelImage from "./marvelImage";
+import MarvelResourceList from "./marvelResourceList";
+import MarvelCreator from "./marvelCreator";
+import MarvelCharacter from "./marvelCharacter";
+import MarvelStory from "./marvelStory";
+import MarvelEvent from "./marvelEvent";
+
+export default class MarvelComic{
+    id: number | undefined;
+    digitalId: number | undefined;
+    title: string | undefined;
+    issueNumber: number | undefined;
+    variantDescription: string | undefined;
+    description: string | undefined;
+    modified: Date | undefined;
+    isbn: string | undefined;
+    upc: string | undefined;
+    diamondCode: string | undefined;
+    ean: string | undefined;
+    issn: string | undefined;
+    format: string | undefined;
+    pageCount: number | undefined;
+    textObjects: MarvelTextObject[] | undefined;
+    resourceURI: string | undefined;
+    urls: MarvelUrl[] | undefined;
+    series: MarvelSeries | undefined;
+    variants: MarvelComic[] | undefined;
+    collections: MarvelComic[] | undefined;
+    collectedIssues: MarvelComic[] | undefined;
+    dates: MarvelDate[] | undefined;
+    prices: MarvelPrice[] | undefined;
+    thumbnail: MarvelImage | undefined;
+    images: MarvelImage[] | undefined;
+    creators: MarvelResourceList<MarvelCreator> | undefined;
+    characters: MarvelResourceList<MarvelCharacter> | undefined;
+    stories: MarvelResourceList<MarvelStory> | undefined;
+    events: MarvelResourceList<MarvelEvent> | undefined;
+}
