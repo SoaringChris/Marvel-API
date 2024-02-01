@@ -12,7 +12,7 @@ export module MarvelEndpoints{
 
     export let comicsEndpoints = ComicsEndpoints
 
-    export const get = async <T>(url: String, requestObject: MarvelRequest | undefined = undefined): Promise<MarvelContainer<T> | undefined> => {
+    export const get = async <T>(url: string, requestObject: MarvelRequest | undefined = undefined): Promise<MarvelContainer<T> | undefined> => {
         return new Promise(function(resolve, reject) {
             let _url = baseUrl + url
             if(requestObject) {

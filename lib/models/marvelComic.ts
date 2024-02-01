@@ -9,6 +9,7 @@ import MarvelCreator from "./marvelCreator";
 import MarvelCharacter from "./marvelCharacter";
 import MarvelStory from "./marvelStory";
 import MarvelEvent from "./marvelEvent";
+import MarvelSummary from "./marvelSummary";
 
 export default class MarvelComic{
     id: number | undefined;
@@ -28,10 +29,10 @@ export default class MarvelComic{
     textObjects: MarvelTextObject[] | undefined;
     resourceURI: string | undefined;
     urls: MarvelUrl[] | undefined;
-    series: MarvelSeries | undefined;
-    variants: MarvelComic[] | undefined;
-    collections: MarvelComic[] | undefined;
-    collectedIssues: MarvelComic[] | undefined;
+    series: MarvelSummary<MarvelComic> | undefined;
+    variants: MarvelSummary<MarvelComic>[] | undefined;
+    collections: MarvelSummary<MarvelComic>[] | undefined;
+    collectedIssues: MarvelSummary<MarvelComic>[] | undefined;
     dates: MarvelDate[] | undefined;
     prices: MarvelPrice[] | undefined;
     thumbnail: MarvelImage | undefined;

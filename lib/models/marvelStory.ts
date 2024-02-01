@@ -5,6 +5,7 @@ import MarvelSeries from "./marvelSeries";
 import MarvelEvent from "./marvelEvent";
 import MarvelCharacter from "./marvelCharacter";
 import MarvelCreator from "./marvelCreator";
+import MarvelSummary from "./marvelSummary";
 
 export default class MarvelStory{
     id: number | undefined;
@@ -19,5 +20,5 @@ export default class MarvelStory{
     events: MarvelResourceList<MarvelEvent> | undefined;
     characters: MarvelResourceList<MarvelCharacter> | undefined;
     creators: MarvelResourceList<MarvelCreator> | undefined;
-    originalIssue: MarvelComic | undefined;
+    originalIssue: MarvelSummary<MarvelComic> | undefined;
 }
